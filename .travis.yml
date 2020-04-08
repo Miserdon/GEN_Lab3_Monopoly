@@ -1,0 +1,5 @@
+language: java
+
+script:
+  - echo "Travis at work"
+  - mvn clean package
