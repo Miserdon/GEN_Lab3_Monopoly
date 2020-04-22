@@ -21,6 +21,12 @@ class MGameTest {
 
     }
 
+    @Test
+    public void runGameTest(){
+        MGame game = new MGame(5);
+        game.playGame();
+    }
+
 
 
 }

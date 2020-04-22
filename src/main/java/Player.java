@@ -11,6 +11,7 @@ public class Player {
         this.pieceToken = token;
         this.piece = new Piece(pos);
         this.board = board;
+        this.dice = dice;
     }
 
     // method to make a player turn
