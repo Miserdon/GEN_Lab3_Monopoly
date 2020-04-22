@@ -4,7 +4,7 @@ public class MGame {
     private static final int NB_ROUNDS = 20;
     private Board board;
     private Player[] players;
-    private Die[] dice;
+    private Cup cup;
     private int roundCounter;
 
 
@@ -21,10 +21,7 @@ public class MGame {
         this.roundCounter = 0;
 
         // create the dice
-        this.dice = new Die[NB_DIE];
-        for (int i = 0; i < NB_DIE; i++){
-            dice[i] = new Die();
-        }
+        this.cup = new Cup(NB_DIE);
 
         // create the players
         this.players = new Player[numberPlayers];
@@ -33,7 +30,7 @@ public class MGame {
         for (int i = 0; i < numberPlayers; i++) {
             String playerName = "Player " + playerID;
             PlayerPieceType token = PlayerPieceType.values()[i];
-            players[i] = new Player(playerName, token, board, board.getSquare(0), dice);
+            players[i] = new Player(playerName, token, board, board.getSquare(0), cup);
             playerID++;
 
         }
