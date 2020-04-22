@@ -38,7 +38,7 @@ public class MGame {
         }
     }
 
-    public void round(){
+    private void playRound(){
 
         // make each player play their turn
         for (Player p:
@@ -48,9 +48,9 @@ public class MGame {
     }
 
 
-    public void play(){
+    public void playGame(){
         while(roundCounter < NB_ROUNDS){
-            round();
+            playRound();
             roundCounter++;
         }
 
