@@ -19,7 +19,7 @@ class SquareTest {
     @Test
     public void testNameRegular(){
         Square reg = new RegularSquare(15);
-        assertEquals("Square15", reg.getName());
+        assertEquals("Square 15", reg.getName());
     }
 
     @Test

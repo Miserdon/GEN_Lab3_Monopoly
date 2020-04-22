@@ -2,8 +2,8 @@ public class Board {
 
     private final static int MAX_SQ = 40;
     private final static int POS_GO = 0;
-    private final static int POS_TAX = 37;
-    private final static int POS_GO_TO_JAIL = 20;
+    private final static int POS_TAX = 4;
+    private final static int POS_GO_TO_JAIL = 30;
     private final static int POS_JAIL = 10;
     private Square[] squares = new Square[MAX_SQ];
 
@@ -11,12 +11,15 @@ public class Board {
     public Board(){
         squares[POS_GO] = new GoSquare();
         squares[POS_TAX] = new IncomeTaxSquare();
+        squares[POS_GO_TO_JAIL] = new GoToJailSquare(squares[POS_JAIL]);
+
+
 
         for (int i = 1; i < MAX_SQ ; i++) {
-            if(squares[i] == null && i != POS_GO_TO_JAIL){
+            if(squares[i] == null && i != POS_GO_TO_JAIL && i != POS_TAX){
                 squares[i] = new RegularSquare(i);
             }
-            squares[POS_GO_TO_JAIL] = new GoToJailSquare(squares[POS_JAIL]);
+
         }
 
 
