@@ -40,11 +40,8 @@ public class Player {
 
     public void reduceCash(int amount) throws IllegalArgumentException{
         if(amount > 0){
-            if(amount > getNetWorth()){
-                netWorth = 0;
-            }else {
-                netWorth -= amount;
-            }
+            //so we never end up with a negative amount of money, if amount exceeds networth, we just set it to 0
+           netWorth = Math.max(netWorth - amount, 0);
         }else{
             throw new IllegalArgumentException();
         }
