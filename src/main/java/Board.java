@@ -11,7 +11,7 @@ public class Board {
     public Board(){
         squares[POS_GO] = new GoSquare();
         squares[POS_TAX] = new IncomeTaxSquare();
-        squares[POS_GO_TO_JAIL] = new GoToJailSquare(squares[POS_JAIL]);
+
 
 
 
@@ -22,6 +22,7 @@ public class Board {
 
         }
 
+        squares[POS_GO_TO_JAIL] = new GoToJailSquare(squares[POS_JAIL]);
 
     }
 
