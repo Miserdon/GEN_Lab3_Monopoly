@@ -13,8 +13,8 @@ public class Player {
         this.pieceToken = token;
         this.piece = new Piece(pos);
         this.board = board;
-        this.netWorth = BASE_NET_WORTH;
         this.dice = dice;
+        this.netWorth = BASE_NET_WORTH;
     }
 
     /**
