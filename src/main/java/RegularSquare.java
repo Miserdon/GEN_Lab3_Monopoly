@@ -5,10 +5,10 @@ public class RegularSquare extends Square {
     }
     /**
      * override that does nothing
-     * @param gaymer the player that landed on this square
+     * @param gamer the player that landed on this square
      */
     @Override
-    public void landedON(Player gaymer) {
+    public void landedON(Player gamer) {
         //do nothing
     }
 }

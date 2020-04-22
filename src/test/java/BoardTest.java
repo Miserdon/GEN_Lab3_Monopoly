@@ -59,6 +59,7 @@ class BoardTest {
 
         Square jail = new GoToJailSquare(null);
         assertEquals("GoToJail", jail.getName());
-
     }
+
+
 }

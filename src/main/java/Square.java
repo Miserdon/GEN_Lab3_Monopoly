@@ -6,5 +6,5 @@ public abstract class Square {
     public String getName() {
         return this.name;
     }
-    public abstract void landedON(Player gaymer);
+    public abstract void landedON(Player gamer);
 }
