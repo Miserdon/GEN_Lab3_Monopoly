@@ -19,6 +19,12 @@
 *.tar.gz
 *.rar
 *.idea
+<<<<<<< HEAD
+=======
+
+# target has to be ignored
+target
+>>>>>>> c78c1201e71fc75c2fab610ac8091c358632fa69
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
