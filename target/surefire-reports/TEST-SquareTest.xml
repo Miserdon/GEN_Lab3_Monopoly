@@ -18,7 +18,7 @@
     <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\FLORIA~1\AppData\Local\Temp\surefire8054276910228128729\surefirebooter6176004069684930093.jar C:\Users\FlorianMülhauser\AppData\Local\Temp\surefire8054276910228128729 2020-04-22T14-00-39_104-jvmRun1 surefire683763309624092317tmp surefire_01758178232170291313tmp"/>
+    <property name="sun.java.command" value="C:\Users\FLORIA~1\AppData\Local\Temp\surefire5375421676437600019\surefirebooter5939268264688072554.jar C:\Users\FlorianMülhauser\AppData\Local\Temp\surefire5375421676437600019 2020-04-22T14-44-41_693-jvmRun1 surefire6175343098487444285tmp surefire_02228678936302371778tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\FlorianMülhauser\Documents\HEIG-VD\BA4\GEN\Labos\Lab03\GEN_Lab3_Monopoly\target\test-classes;C:\Users\FlorianMülhauser\Documents\HEIG-VD\BA4\GEN\Labos\Lab03\GEN_Lab3_Monopoly\target\classes;C:\Users\FlorianMülhauser\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.1\junit-jupiter-5.4.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.1\junit-jupiter-api-5.4.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\FlorianMülhauser\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\junit\platform\junit-platform-commons\1.4.1\junit-platform-commons-1.4.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.1\junit-jupiter-params-5.4.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.1\junit-jupiter-engine-5.4.1.jar;C:\Users\FlorianMülhauser\.m2\repository\org\junit\platform\junit-platform-engine\1.4.1\junit-platform-engine-1.4.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\FlorianMülhauser"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\FLORIA~1\AppData\Local\Temp\surefire8054276910228128729\surefirebooter6176004069684930093.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\FLORIA~1\AppData\Local\Temp\surefire5375421676437600019\surefirebooter5939268264688072554.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_231\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
