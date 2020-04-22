@@ -8,4 +8,7 @@ class SquareTest {
     Square sq = new Square("testName");
     assert("testName".equals(sq.getName()));
     }
+
+    @Test
+    
 }
