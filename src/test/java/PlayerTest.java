@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTest {
-    private  Player gaymer;
+    private  Player gamer;
 
     @BeforeEach
     public void createPlayer(){
@@ -16,33 +16,33 @@ public class PlayerTest {
         Square pos = testBoard.getSquare(7);
         Cup cup = new Cup(2);
 
-        gaymer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,cup);
+        gamer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,cup);
     }
 
     @Test
     public void testBaseNetWorth(){
-        assertEquals(1500, gaymer.getNetWorth());
+        assertEquals(1500, gamer.getNetWorth());
     }
 
     @ParameterizedTest
     @ValueSource (ints = {0, -15})
     public void testInvalidAddAmount(int amount){
-        assertThrows(IllegalArgumentException.class , () -> {gaymer.addCash(amount);});
+        assertThrows(IllegalArgumentException.class , () -> {gamer.addCash(amount);});
     }
 
     @ParameterizedTest
     @ValueSource (ints = {0, -15})
     public void testInvalidReduceAmount(int amount){
-        assertThrows(IllegalArgumentException.class , () -> {gaymer.reduceCash(amount);});
+        assertThrows(IllegalArgumentException.class , () -> {gamer.reduceCash(amount);});
     }
 
     @ParameterizedTest
     @ValueSource (ints = {5,500,2000})
     public void testValidAdd(int amount){
         //we have base money because of the beforeEach
-        int expected = gaymer.getNetWorth() + amount;
-        gaymer.addCash(amount);
-        int netWorth = gaymer.getNetWorth();
+        int expected = gamer.getNetWorth() + amount;
+        gamer.addCash(amount);
+        int netWorth = gamer.getNetWorth();
         assertEquals(expected, netWorth);
     }
 
@@ -50,9 +50,9 @@ public class PlayerTest {
     @ValueSource (ints = {5,500,2000})
     public void testValidReduce(int amount){
         //we have base money because of the beforeEach
-        int expected = Math.max(gaymer.getNetWorth() - amount, 0);
-        gaymer.reduceCash(amount);
-        int netWorth = gaymer.getNetWorth();
+        int expected = Math.max(gamer.getNetWorth() - amount, 0);
+        gamer.reduceCash(amount);
+        int netWorth = gamer.getNetWorth();
         assertEquals(expected, netWorth);
     }
 

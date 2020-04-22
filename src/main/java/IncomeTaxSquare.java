@@ -8,11 +8,11 @@ public class IncomeTaxSquare extends  Square{
 
     /**
      * removes money from the player, amount equal to 10% of his networth (200 maximum)
-     * @param gaymer
+     * @param gamer
      */
     @Override
-    public void landedON(Player gaymer) {
-        int netWorth = gaymer.getNetWorth();
-        gaymer.reduceCash(Math.min(200,(int) (0.1 * netWorth)));
+    public void landedON(Player gamer) {
+        int netWorth = gamer.getNetWorth();
+        gamer.reduceCash(Math.min(200,(int) (0.1 * netWorth)));
     }
 }

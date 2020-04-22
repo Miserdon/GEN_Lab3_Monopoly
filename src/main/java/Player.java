@@ -54,7 +54,7 @@ public class Player {
      * @param square
      */
     public void setLocation(Square square){
-        piece.setPosition(square);
+        this.piece.setPosition(square);
     }
 
     public Square getPosition(){return this.piece.getPosition();}

@@ -9,10 +9,10 @@ public class GoSquare extends Square {
 
     /**
      * adds money to the player that landed on the go square
-     * @param gaymer the player in question
+     * @param gamer the player in question
      */
     @Override
-    public void landedON(Player gaymer) {
-        gaymer.addCash(MONEY_GAINED);
+    public void landedON(Player gamer) {
+        gamer.addCash(MONEY_GAINED);
     }
 }

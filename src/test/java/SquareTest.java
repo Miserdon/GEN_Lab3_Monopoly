@@ -3,9 +3,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 class SquareTest {
-    private  Player gaymer;
+    private  Player gamer;
 
     @BeforeEach
     public void createPlayer(){
@@ -13,7 +14,7 @@ class SquareTest {
         Square pos = testBoard.getSquare(7);
         Cup cup = new Cup(2);
 
-        gaymer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,cup);
+        gamer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,cup);
     }
 
     @Test
@@ -44,24 +45,34 @@ class SquareTest {
     public void testLandGo(){
         int expected = 1700;
         Square go = new GoSquare();
-        go.landedON(gaymer);
-        assertEquals(expected, gaymer.getNetWorth());
+        go.landedON(gamer);
+        assertEquals(expected, gamer.getNetWorth());
     }
 
     @Test
     public void testLandTaxPercent(){
         int expected = 1500 - ((int) (0.1 * 1500));
         Square tax = new IncomeTaxSquare();
-        tax.landedON(gaymer);
-        assertEquals(expected, gaymer.getNetWorth());
+        tax.landedON(gamer);
+        assertEquals(expected, gamer.getNetWorth());
     }
 
     @Test
     public void testLandTaxMax(){
         int expected = 1900;
-        gaymer.addCash(600);
+        gamer.addCash(600);
         Square tax = new IncomeTaxSquare();
-        tax.landedON(gaymer);
-        assertEquals(expected, gaymer.getNetWorth());
+        tax.landedON(gamer);
+        assertEquals(expected, gamer.getNetWorth());
+    }
+
+    @Test
+    public void testGoingToJail(){
+        Board board = new Board();
+        Square jail = board.getSquare(10);
+        gamer.setLocation(new GoToJailSquare(jail));
+        gamer.getPosition().landedON(gamer);
+
+        assertSame(jail, gamer.getPosition());
     }
 }
