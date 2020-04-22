@@ -1,4 +1,4 @@
-public class GoSquare extends Square{
+public class GoSquare extends Square {
     private static int MONEY_GAINED = 200;
     /**
      * default constructor
