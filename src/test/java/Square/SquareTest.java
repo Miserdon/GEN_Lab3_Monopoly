@@ -1,14 +1,6 @@
-import org.junit.jupiter.api.Test;
-
+package java.Square;
 
 class SquareTest {
 
-    @Test
-    void squareReturnGoodName() {
-    Square sq = new Square("testName");
-    assert("testName".equals(sq.getName()));
-    }
 
-    @Test
-    
 }

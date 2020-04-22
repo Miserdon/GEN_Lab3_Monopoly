@@ -1,13 +1,8 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
 
 
-
+    /*
     @Test
     public void creationOfPlayerJohnny(){
         Board board = new Board();
@@ -21,5 +16,7 @@ class PlayerTest {
         assertNotNull(p);
 
     }
+    
+     */
 
 }
