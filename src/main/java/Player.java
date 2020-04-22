@@ -57,6 +57,8 @@ public class Player {
         piece.setPosition(square);
     }
 
+    public Square getPosition(){return this.piece.getPosition();}
+
     // method to make a player turn
     public void takeTurn(){
 

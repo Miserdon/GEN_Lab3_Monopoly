@@ -1,7 +1,7 @@
 public class RegularSquare extends Square {
 
     public RegularSquare(int indx){
-        super("Square" + indx);
+        super("Square " + indx);
     }
     /**
      * override that does nothing
