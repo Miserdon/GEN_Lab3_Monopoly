@@ -34,6 +34,7 @@ public class MGame {
             String playerName = "Player " + playerID;
             PlayerPieceType token = PlayerPieceType.values()[i];
             players[i] = new Player(playerName, token, board, board.getSquare(0), dice);
+            playerID++;
 
         }
     }
@@ -41,15 +42,16 @@ public class MGame {
     private void playRound(){
 
         // make each player play their turn
-        for (Player p:
-             players) {
-            p.takeTurn();
+        for (int i = 0; i < players.length; i++) {
+            players[i].takeTurn();
         }
     }
 
 
     public void playGame(){
+        System.out.println("Starting of the Monopoly game !");
         while(roundCounter < NB_ROUNDS){
+            System.out.println("------------ Begining of the round #" + (roundCounter+1) + " ------------");
             playRound();
             roundCounter++;
         }
