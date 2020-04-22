@@ -13,6 +13,7 @@ public class Player {
         this.pieceToken = token;
         this.piece = new Piece(pos);
         this.board = board;
+<<<<<<< HEAD
         this.netWorth = BASE_NET_WORTH;
     }
 
@@ -45,11 +46,18 @@ public class Player {
         }else{
             throw new IllegalArgumentException();
         }
+=======
+        this.dice = dice;
+>>>>>>> e7d7198fdfcbf1975668f680d4ce63eeafcd5b37
     }
 
     // method to make a player turn
     public void takeTurn(){
+
         int totalFaceValue = 0;
+
+        //tell which player turn it is
+        System.out.println(this.name + " is now playing. ");
 
         //need to roll the 2 dice
         for (Die die:
@@ -59,6 +67,8 @@ public class Player {
             totalFaceValue += fv;
 
         }
+
+        System.out.println(this.name + " has rolled " + totalFaceValue);
 
         Square current = piece.getPosition();
 
@@ -71,6 +81,8 @@ public class Player {
 
             } else {
                 piece.setPosition(next);
+                // Tells Player x landed on Square y
+                System.out.println(this.name + " landed on " + next.getName());
             }
         } catch(IllegalArgumentException e){
             System.out.println(e.toString());
