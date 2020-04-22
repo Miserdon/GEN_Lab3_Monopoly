@@ -1,0 +1,3 @@
+public enum PlayerPieceType {
+    TOP_HAT, BOOT, RACING_CAR, BATTLESHIP, CAT, DOG, WHEELBARROW, THIMBLE
+}
