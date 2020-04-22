@@ -1,16 +1,24 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DieTest {
 
+    private Die die;
 
+    @BeforeEach
+    public void initDie(){
+        die = new Die();
 
-    @Test
+    }
+
+    @RepeatedTest(100)
     void getFaceValueInRange1to6() {
-        Die die = new Die();
+
         die.roll();
-        assertTrue(die.getFaceValue() > 0 && die.getFaceValue() < 7);
+        assertTrue(die.getFaceValue() > 0 && die.getFaceValue() < 7, "Error die value not between 1 and 6");
     }
 
 
