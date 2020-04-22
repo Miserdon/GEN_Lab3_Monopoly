@@ -1,11 +1,11 @@
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.*;
 
-class SquareTest {
+class GoSquareTest {
+
+
     private  Player gamer;
 
     @BeforeEach
@@ -18,12 +18,17 @@ class SquareTest {
     }
 
     @Test
-    public void testNameRegular(){
-        Square reg = new RegularSquare(15);
-        assertEquals("Square 15", reg.getName());
+    public void testNameGo(){
+        Square go = new GoSquare();
+        assertEquals("Go", go.getName());
     }
 
-
-
+    @Test
+    public void testLandGo(){
+        int expected = 1700;
+        Square go = new GoSquare();
+        go.landedON(gamer);
+        assertEquals(expected, gamer.getNetWorth());
+    }
 
 }
