@@ -13,8 +13,8 @@ public class Player {
         this.pieceToken = token;
         this.piece = new Piece(pos);
         this.board = board;
-<<<<<<< HEAD
         this.netWorth = BASE_NET_WORTH;
+        this.dice = dice;
     }
 
     /**
@@ -46,9 +46,6 @@ public class Player {
         }else{
             throw new IllegalArgumentException();
         }
-=======
-        this.dice = dice;
->>>>>>> e7d7198fdfcbf1975668f680d4ce63eeafcd5b37
     }
 
     // method to make a player turn
