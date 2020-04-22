@@ -42,4 +42,12 @@ public class Board {
         return null;
     }
 
+    public Square getSquare(int position){
+        if (position >= 40 || position < 0){
+            throw new IllegalArgumentException("the square number should be from 0 to 39");
+        }
+
+        return squares[position];
+    }
+
 }
