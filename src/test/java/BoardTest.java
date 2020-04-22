@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTest {
     Board board;
-    private  int BOARD_SIZE;
+    private int BOARD_SIZE = 40;
     @BeforeEach
     void initializeBasicBoard() {
         board = new Board();
@@ -17,10 +17,18 @@ class BoardTest {
 
     @Test
     void constructorInitializeCorrectBoard() {
-        Square[] squares = new Square[BOARD_SIZE];
-        Square current = new Square("Go");
         for(int i = 0;i < BOARD_SIZE; ++i) {
-            squares[i] = board.getNextSquare(current,2);
+            assertNotNull(board.getSquare(i));
         }
+    }
+
+    @Test
+    void methodsFailsWithIllegalArguments() {
+        assertThrows(IllegalArgumentException.class,() -> board.getNextSquare(board.getSquare(0),1));
+        assertThrows(IllegalArgumentException.class,() -> board.getNextSquare(null,2));
+        assertThrows(IllegalArgumentException.class,() -> board.getNextSquare(board.getSquare(0),13));
+        assertThrows(IllegalArgumentException.class,() -> board.getSquare(-1));
+        assertThrows(IllegalArgumentException.class,() -> board.getSquare(BOARD_SIZE + 1));
+
     }
 }
