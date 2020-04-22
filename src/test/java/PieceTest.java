@@ -1,11 +1,16 @@
-/*
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 class PieceTest {
    private Square initialPos;
    private Piece initialPiece;
 
     @BeforeEach
     void setupPieceWithInitialPos() {
-         initialPos = new Square("initial");
+         initialPos = new RegularSquare(1);
          initialPiece = new Piece(initialPos);
     }
 
@@ -14,10 +19,11 @@ class PieceTest {
         assertEquals(initialPiece.getPosition(),initialPos);
     }
 
+
     @Test
     void setPositionWorksAsExpected() {
-        Square secondPosition = new Square("second place");
-        Square thirdPosition = new Square("third place");
+        Square secondPosition = new RegularSquare(2);
+        Square thirdPosition = new RegularSquare(3);
         initialPiece.setPosition(secondPosition);
         assertEquals(initialPiece.getPosition(),secondPosition);
         initialPiece.setPosition(thirdPosition);
@@ -33,4 +39,4 @@ class PieceTest {
     void setPositionFailWithNullArgument() {
         assertThrows(IllegalArgumentException.class,() -> initialPiece.setPosition(null));
     }
-}*/
+}

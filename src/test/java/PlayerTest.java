@@ -14,9 +14,9 @@ public class PlayerTest {
     public void createPlayer(){
         Board testBoard = new Board();
         Square pos = testBoard.getSquare(7);
-        Die[] dice = new Die[2];
+        Cup cup = new Cup(2);
 
-        gaymer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,dice);
+        gaymer = new Player("Test_Player",PlayerPieceType.BOOT, testBoard,pos,cup);
     }
 
     @Test

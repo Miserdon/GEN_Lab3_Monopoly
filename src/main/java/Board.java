@@ -2,17 +2,21 @@ public class Board {
 
     private final static int MAX_SQ = 40;
     private final static int POS_GO = 0;
+    private final static int POS_TAX = 37;
+    private final static int POS_GO_TO_JAIL = 20;
+    private final static int POS_JAIL = 10;
     private Square[] squares = new Square[MAX_SQ];
 
     //constructor
     public Board(){
         squares[POS_GO] = new GoSquare();
+        squares[POS_TAX] = new IncomeTaxSquare();
 
         for (int i = 1; i < MAX_SQ ; i++) {
-            String str = "Square ";
-            str += i;
-            squares[i] = new RegularSquare(i);
-
+            if(squares[i] == null && i != POS_GO_TO_JAIL){
+                squares[i] = new RegularSquare(i);
+            }
+            squares[POS_GO_TO_JAIL] = new GoToJailSquare(squares[POS_JAIL]);
         }
 
 
