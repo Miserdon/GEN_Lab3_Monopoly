@@ -1,16 +1,17 @@
 public class Board {
 
     private final static int MAX_SQ = 40;
+    private final static int POS_GO = 0;
     private Square[] squares = new Square[MAX_SQ];
 
     //constructor
     public Board(){
-        squares[0] = new Square("Go");
+        squares[POS_GO] = new GoSquare();
 
         for (int i = 1; i < MAX_SQ ; i++) {
             String str = "Square ";
             str += i;
-            squares[i] = new Square(str);
+            squares[i] = new RegularSquare(i);
 
         }
 

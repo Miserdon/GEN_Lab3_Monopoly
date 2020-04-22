@@ -19,6 +19,8 @@
 *.tar.gz
 *.rar
 *.idea
+<<<<<<< HEAD
+=======
 
 # target has to be ignored
 target

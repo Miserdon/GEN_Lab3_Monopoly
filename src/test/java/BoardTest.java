@@ -1,8 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
+/*
 class BoardTest {
     Board board;
     private int BOARD_SIZE = 40;
@@ -31,4 +27,4 @@ class BoardTest {
         assertThrows(IllegalArgumentException.class,() -> board.getSquare(BOARD_SIZE + 1));
 
     }
-}
+}*/

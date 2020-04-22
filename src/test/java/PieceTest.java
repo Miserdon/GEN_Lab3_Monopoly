@@ -1,9 +1,4 @@
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
+/*
 class PieceTest {
    private Square initialPos;
    private Piece initialPiece;
@@ -38,4 +33,4 @@ class PieceTest {
     void setPositionFailWithNullArgument() {
         assertThrows(IllegalArgumentException.class,() -> initialPiece.setPosition(null));
     }
-}
+}*/
